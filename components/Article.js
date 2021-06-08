@@ -107,6 +107,14 @@ function articleMaker(object) {
   date.classList.add("date");
   button.classList.add("expandButton");
 
+  //add content from data object to component elements
+  title.textContent = object.title;
+  date.textContent = object.date;
+  p1.textContent = object.firstParagraph;
+  p2.textContent = object.secondParagraph;
+  p3.textContent = object.thirdParagraph;
+  button.textContent = "+";
+
   //append new elements to DOM in their hierarchy
   article.appendChild(title);
   article.appendChild(date);
@@ -118,7 +126,7 @@ function articleMaker(object) {
   //return article
   return article;
 }
-console.log("Article component", articleMaker(data));
+console.log("Article component", articleMaker(data[0]));
 
 // <div class="article">
 //   <h2>{title of the article}</h2>
