@@ -151,5 +151,13 @@ console.log("Article component", articleMaker(data[0]));
 // Step 4: Outside your function now, loop over the data. At each iteration you'll use your component
 // to create a div.article element and append it to the DOM inside div.articles (see index.html).
 
+//grab div.articles parent to append newArticle to
+const articlesParent = document.querySelector(".articles");
+
+data.forEach((index) => {
+  const newArticle = articleMaker(index);
+  articlesParent.appendChild(newArticle);
+});
+
 // Step 5: Try adding new article object to the data array. Make sure it is in the same format as the others.
 // Refresh the page to see the new article.
