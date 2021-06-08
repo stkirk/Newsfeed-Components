@@ -123,10 +123,17 @@ function articleMaker(object) {
   article.appendChild(p3);
   article.appendChild(button);
 
+  //add click EventListener to span button that toggles .article-open class
+  button.addEventListener("click", () => {
+    article.classList.toggle("article-open");
+  });
+
   //return article
   return article;
 }
 console.log("Article component", articleMaker(data[0]));
+
+document.body.appendChild(articleMaker(data[0]));
 
 // <div class="article">
 //   <h2>{title of the article}</h2>
