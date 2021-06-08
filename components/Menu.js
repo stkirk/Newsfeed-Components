@@ -50,3 +50,9 @@ function menuMaker(array) {
 console.log("menu", menuMaker(menuItems));
 
 // Step 6: Use 'menuMaker' to create a menu using the 'menuItems' array, and append the returned menu to the header.
+const componentMenu = menuMaker(menuItems);
+console.log("component", componentMenu);
+
+//Grab header and append componentMenu to it
+const header = document.querySelector(".header");
+header.appendChild(componentMenu);
